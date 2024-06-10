@@ -36,14 +36,12 @@ const products = [{
 }];
 
 export const Store = () => {
-  const [icon, setIcon] = useState('view_module');
+  const [icon, setIcon] = useState('view_list');
   const [showListView, setShowListView] = useState(false);
   const [showCardsView, setShowCardsView] = useState(true);
 
   const onSwitch = () => {
-    setIcon(
-      icon === 'view_list' ? 'view_module' : 'view_list'
-    );
+    setIcon(icon === 'view_module' ? 'view_list' : 'view_module');
     setShowListView(p => !p);
     setShowCardsView(p => !p);
   }
